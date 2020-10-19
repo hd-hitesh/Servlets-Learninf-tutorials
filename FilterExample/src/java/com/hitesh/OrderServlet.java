@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package myservlets;
+package com.hitesh;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -16,8 +16,17 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Hitesh Kumar Sahu
  */
-public class Servlet1 extends HttpServlet {
-    
+public class OrderServlet extends HttpServlet {
+
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -26,24 +35,10 @@ public class Servlet1 extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Servlet1</title>");            
+            out.println("<title>Servlet OrderServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            
-            //Fetch name..
-            String name = request.getParameter("user_name");
-            
-            out.println("<h1> Your name is "+name+"</h1>");
-//            out.println("<a href='servlet2?user="+name+"'>Go to second servlet</a>");
-           
-            out.println("<form action='servlet2'>"
-                    + "<input type='hidden' name='user_name' value='"+name+"'/>"
-                    + "<button>Go to Second Servlet</button>"
-                    + ""
-                    + ""
-                    + "</form>");
-            
-
+            out.println("<h1>Servlet OrderServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }

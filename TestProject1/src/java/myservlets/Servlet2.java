@@ -29,7 +29,7 @@ public class Servlet2 extends HttpServlet {
             out.println("<title>Servlet Servlet2</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1 style='color:blue;'> Welcome Back "+request.getParameter("user")+"</h1>");
+            out.println("<h1 style='color:blue;'> Welcome Back "+request.getParameter("user_name")+"</h1>");
             out.println("</body>");
             out.println("</html>");
         }
